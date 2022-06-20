@@ -19,6 +19,7 @@ public class buttonCommands : MonoBehaviour
     public GameObject Home;
     public GameObject Community;
     public GameObject Cart;
+    public GameObject Confirm;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +63,14 @@ public class buttonCommands : MonoBehaviour
         Home.SetActive(false);
         Community.SetActive(false);
         Cart.SetActive(true);
+    }
+
+    public void conFirm()
+    {
+        Home.SetActive(false);
+        Community.SetActive(false);
+        Cart.SetActive(false);
+        Confirm.SetActive(true);
     }
     public void checkSwitch()
     {
