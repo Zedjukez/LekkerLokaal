@@ -13,7 +13,7 @@ public class buttonCommands : MonoBehaviour
     public Text wachtwoordField;
     public Button A;
     public Button B;
-    //public GameObject checkButton;
+    public GameObject checkButton;
     //public bool buttonTrue;
     public GameObject checkBox;
     public GameObject Home;
@@ -65,7 +65,7 @@ public class buttonCommands : MonoBehaviour
     }
     public void checkSwitch()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        checkBox.SetActive(true);
     }
 
         
