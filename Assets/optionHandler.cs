@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class optionHandler : MonoBehaviour
 {
+    public OptieSaver.optieNaam Veld;
     public enum buttonState {unanswered, yes, no};
     public GameObject kruisyes, kruisNee;
-    private buttonState optieKeuze = buttonState.unanswered;
+    public buttonState optieKeuze = buttonState.unanswered;
+    [SerializeField]
+    private OptieSaver saver;
+    
+    void Awake()
+    {
+        saver = GetComponentInParent<OptieSaver>();
+    }
 
     public void buttonYes(){
         if (optieKeuze != buttonState.yes)
