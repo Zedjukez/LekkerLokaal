@@ -20,6 +20,7 @@ public class buttonCommands : MonoBehaviour
     public GameObject Community;
     public GameObject Cart;
     public GameObject Confirm;
+    public GameObject Submit;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +50,7 @@ public class buttonCommands : MonoBehaviour
         Home.SetActive(true);
         Community.SetActive(false);
         Cart.SetActive(false);
+        Confirm.SetActive(false);
     }
 
     public void switchCommunity()
@@ -56,6 +58,7 @@ public class buttonCommands : MonoBehaviour
         Home.SetActive(false);
         Community.SetActive(true);
         Cart.SetActive(false);
+        Confirm.SetActive(false);
     }
     
     public void switchCart()
@@ -63,6 +66,7 @@ public class buttonCommands : MonoBehaviour
         Home.SetActive(false);
         Community.SetActive(false);
         Cart.SetActive(true);
+        Confirm.SetActive(false);
     }
 
     public void conFirm()
@@ -77,7 +81,16 @@ public class buttonCommands : MonoBehaviour
         checkBox.SetActive(true);
     }
 
-        
+    public void subMit()
+    {
+        SceneManager.LoadScene("Home");
+
+    }
+
+    public void loadSubmit()
+    {
+        Submit.SetActive(true);
+    }
     } 
 
 
